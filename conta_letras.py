@@ -9,8 +9,9 @@ def conta_letras(frase):
             :return: dicionário com a quantidade de cada letra dentro da frase passada como argumento"""
 
     dicionario_letras = {}
+    frase = frase.replace(' ', '')
     for letra in frase:
-        if letra not in dicionario_letras and letra != ' ':
+        if letra not in dicionario_letras:
             dicionario_letras[letra] = frase.count(letra)
     return dicionario_letras
 
